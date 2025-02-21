@@ -26,8 +26,13 @@ namespace machinedata
 
             int iplength = input.Length;
             int comlength = compressedBase64.Length;
-            MessageBox.Show("Length of Compressed Base64: " + iplength.ToString());
-            MessageBox.Show("Length of Compressed Base64: " + comlength.ToString());
+            //MessageBox.Show("Length of Compressed Base64: " + iplength.ToString());
+            //MessageBox.Show("Length of Compressed Base64: " + comlength.ToString());
+
+            Bitmap qrCodeImage = GenerateQRCode.GenerateAndDisplayQRCode(compressedBase64);
+
+            pictureBox1.Image = qrCodeImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void button1_Click(object sender, EventArgs e)

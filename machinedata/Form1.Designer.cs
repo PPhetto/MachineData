@@ -38,9 +38,9 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(222, 160);
+            pictureBox1.Location = new Point(253, 148);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(425, 313);
+            pictureBox1.Size = new Size(350, 350);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -59,7 +59,7 @@
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
-            button1.Text = "button1";
+            button1.Text = "Browse";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -68,7 +68,7 @@
             button2.Name = "button2";
             button2.Size = new Size(109, 37);
             button2.TabIndex = 3;
-            button2.Text = "button2";
+            button2.Text = "Generate QR";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
