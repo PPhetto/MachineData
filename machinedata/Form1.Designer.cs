@@ -31,12 +31,14 @@
             pictureBox1 = new PictureBox();
             label1 = new Label();
             button1 = new Button();
+            button2 = new Button();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(212, 137);
+            pictureBox1.Location = new Point(222, 160);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(425, 313);
             pictureBox1.TabIndex = 0;
@@ -53,18 +55,38 @@
             // 
             // button1
             // 
-            button1.Location = new Point(77, 52);
+            button1.Location = new Point(39, 52);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(373, 101);
+            button2.Name = "button2";
+            button2.Size = new Size(109, 37);
+            button2.TabIndex = 3;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Enabled = false;
+            textBox1.Location = new Point(162, 54);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(545, 27);
+            textBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(878, 510);
+            Controls.Add(textBox1);
+            Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
@@ -80,5 +102,7 @@
         private PictureBox pictureBox1;
         private Label label1;
         private Button button1;
+        private Button button2;
+        private TextBox textBox1;
     }
 }
