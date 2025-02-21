@@ -56,13 +56,9 @@ namespace machinedata
                                 fileContent[i] = fileContent[i] + "#";
                                 formattedContent = Regex.Replace(fileContent[i], "(?<=\\w)Dev=", "#Dev=");
                             }
-
                         }
 
                         formattedContent = string.Join("", fileContent);
-
-
-
 
                         if (!formattedContent.EndsWith("#Dev=") && !formattedContent.EndsWith("#"))
                         {
@@ -72,6 +68,7 @@ namespace machinedata
                         textBox1.BackColor = Color.White;
                         textBox1.Enabled = true;
                         textBox1.ReadOnly = true;
+                        pictureBox1.Image = null;
 
                     }
 

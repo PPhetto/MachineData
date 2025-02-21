@@ -47,11 +47,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(409, 11);
+            label1.Location = new Point(341, 18);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(184, 20);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "Select file for generate QR";
             label1.Click += label1_Click;
             // 
             // button1
@@ -66,7 +66,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(373, 101);
+            button2.Location = new Point(373, 97);
             button2.Name = "button2";
             button2.Size = new Size(109, 37);
             button2.TabIndex = 3;
