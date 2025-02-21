@@ -1,3 +1,9 @@
+using System;
+using System.IO;
+using System.IO.Compression;
+using System.Text;
+using System.Windows.Forms;
+
 namespace machinedata
 {
     public partial class Form1 : Form
@@ -10,6 +16,23 @@ namespace machinedata
         private void button2_Click(object sender, EventArgs e)
         {
             string input = "#MCN=MPS54#Dev=X,Addr=0,3F#FAAFAAAAAAAAAAAA#Dev=X,Addr=40,7F#AAAAAAAAAAAAAAAA#Dev=X,Addr=80,BF#AAAAAAAAAAAAAAAA#Dev=X,Addr=C0,FF#AAAAAAAAAAAAAAAA#Dev=X,Addr=100,13F#AAAAAAAAAAAAAAAA#Dev=X,Addr=140,17F#AAAAAAAAAAAAAAAA#Dev=X,Addr=180,1BF#AAAAAAAAAAAAAAAA#Dev=X,Addr=1C0,1FF#AAAAAAAAAAAAAAAA#Dev=X,Addr=200,23F#AAAAAAAAAAAAAAAA#Dev=X,Addr=240,27F#AAAAAAAAAAAAAAAA#Dev=X,Addr=280,2BF#AAAAAAAAAAAAAAAA#Dev=X,Addr=2C0,2FF#AAAAAAAAAAAAAAAA#Dev=X,Addr=300,33F#AAAAAAAAAAAAAAAA#Dev=X,Addr=340,37F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=0,3F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=40,7F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=80,BF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=C0,FF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=100,13F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=140,17F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=180,1BF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=1C0,1FF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=200,23F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=240,27F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=280,2BF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=2C0,2FF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=300,33F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=340,37F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=0,3F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=40,7F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=80,BF#AAAAAAAAAAAAAAAA#Dev=EN,Addr=C0,FF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=100,13F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=140,17F#AAAAAAAAAAAAAAAA#Dev=Y,Addr=180,1BF#AAAAAAAAAAAAAAAA#Dev=EN,Addr=1C0,1FF#AAAAAAAAAAAAAAAA#Dev=Y,Addr=200,23F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=240,27F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=280,2BF#AAAAAAAAAAAAAAAA#Dev=EN,Addr=2C0,2FF#AAAAAAAAAAAAAAAA#Dev=EN,Addr=300,33F#AAAAAAAAAAAAAAAA#Dev=EN,Addr=340,37F#AAAAAAAAAAAAAAAA#Dev=RLS,Addr=0,3F#AAAAAAAAAAAAAAAA#";
+
+            DateTime currentDateTime = DateTime.Now;
+            string formattedDateTime = currentDateTime.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string inputWithDateTime = input + " " + formattedDateTime;
+
+            string compressedBase64 = Encode.CompressAndEncodeToBase64(inputWithDateTime);
+
+            int iplength = input.Length;
+            int comlength = compressedBase64.Length;
+            MessageBox.Show("Length of Compressed Base64: " + iplength.ToString());
+            MessageBox.Show("Length of Compressed Base64: " + comlength.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
